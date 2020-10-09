@@ -85,6 +85,11 @@
 # firewall-cmd --state
 ```
 
+## 查看指定的端口
+``` javascript
+# netstat -tunlp | grep 8080
+```
+
 ## 查看所有打开的端口
 ``` javascript
 # firewall-cmd --zone=public --list-ports
