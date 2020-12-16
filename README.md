@@ -12,12 +12,12 @@
 # systemctl status firewalld
 ```
 
-## 停止
+## 禁用
 ``` javascript
 # systemctl disable firewalld
 ```
 
-## 禁用
+## 停止
 ``` javascript
 # systemctl stop firewalld
 ```
