@@ -12,18 +12,35 @@
 # systemctl status firewalld
 ```
 
-## 永久关闭防火墙
+## 关闭防火墙
 
-``` bash
-# systemctl disable firewalld
+- stop：立即停止正在运行的 firewalld 服务（当前会话生效）
+   - 防火墙规则立即失效
+   - 重启系统或手动启动会恢复运行
+   - 适合临时测试或应急操作
+- disable：禁止开机自启（持久化配置）
+   - 不会立即停止正在运行的防火墙
+   - 仅在系统重启后生效
+   - 适合需要永久关闭防火墙的场景
 
-# reboot
-```
-
-## 临时关闭防火墙
+### 立即停止防火墙
 
 ``` bash
 # systemctl stop firewalld
+```
+
+### 禁止开机自启
+
+``` bash
+# systemctl disable firewalld
+```
+
+### 立即停止并禁止开机自启（彻底关闭）
+
+``` bash
+# systemctl stop firewalld
+
+# systemctl disable firewalld
 ```
 
 # systemctl
